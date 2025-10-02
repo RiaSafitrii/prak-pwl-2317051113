@@ -15,10 +15,10 @@ class UserController extends Controller
         $kelasModel = new Kelas();
         $kelas = $kelasModel->getKelas();
         $data = [
-            'title' => 'create User',
+            'title' => 'Create User',
             'kelas' => $kelas,
         ];
-        return view('create User', $data);
+        return view('create_user', $data);
     }
 
     public function __construct(){
@@ -29,7 +29,7 @@ class UserController extends Controller
     public function store(Request $request) {
         $this->userModel->create([
             'nama' => $request->input('nama'),
-            'nim' => $request->input('npm'),
+            'npm' => $request->input('npm'),
             'kelas_id' => $request->input('kelas_id'),
         ]);
 
@@ -41,6 +41,8 @@ class UserController extends Controller
             'title' => 'List User',
             'users' => $this->userModel->getUser(),
         ];
+
+        return view('list_user',$data);
     }
 
 }
