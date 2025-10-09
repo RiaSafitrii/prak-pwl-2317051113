@@ -15,15 +15,6 @@
 
 <body>
     @yield('content')
-
-    <x-navbar />
-
-    <main class="py-4">
-        @yield('content')
-    </main>
-
-    <x-footer />
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY31HB60NNkmXc5s9fDVZLESAAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
         crossorigin="anonymous">
